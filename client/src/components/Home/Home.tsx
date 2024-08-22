@@ -15,7 +15,7 @@ export const Home = () => {
             <div className="left_card_me">
               <img
                 className="img_me"
-                src="./public/photo_2024-08-09_23-07-25.jpg"
+                src="/photo_2024-08-09_23-07-25.jpg"
                 width={200}
                 alt=""
               />
@@ -37,7 +37,7 @@ export const Home = () => {
             <div className="left_card_about">
               <img
                 className="img_me"
-                src="./public/signature.png"
+                src="/signature.png"
                 width={200}
                 alt=""
               />
