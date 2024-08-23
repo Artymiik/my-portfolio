@@ -13,6 +13,14 @@ const App = createBrowserRouter([
         path: "about",
         element: <pages.about />,
       },
+      {
+        path: "signin",
+        element: <pages.signin />,
+      },
+      {
+        path: "signup",
+        element: <pages.signup />,
+      },
     ],
   },
 ]);

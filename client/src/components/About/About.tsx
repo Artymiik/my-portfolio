@@ -1,9 +1,11 @@
+import { Navigator } from "../Navigator/Navigator";
 import "./About.sass";
 
 export const About = () => {
   return (
     <>
-      <h1>This is page about</h1>
+      <Navigator />
+      <h1>HI</h1>
     </>
   );
 };

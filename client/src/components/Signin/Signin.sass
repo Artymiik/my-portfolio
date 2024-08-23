@@ -1,0 +1,147 @@
+#top__pannel__signin
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 auto
+  text-align: center
+
+  p:nth-child(1)
+    font-weight: 500
+    letter-spacing: .1px
+    font-size: 20px
+    color: #fff
+    margin: 5rem 0 3px
+  p:nth-child(2)
+    font-weight: 400
+    color: #b1b1b1
+    letter-spacing: .2px
+    font-size: 13px
+    margin: 0
+
+#pannel__inputs
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 0 auto
+
+  .input__box
+    position: relative
+    display: flex
+    margin: 0 auto
+    // width: 100%
+  .input__box > label
+    position: absolute
+    left: 5%
+    top: 20%
+
+    font-size: 13px
+    letter-spacing: .4px
+    font-weight: 300
+    color: #a1a1a1
+    transition: .3s
+
+  .input__box input:focus~label,
+  .input__box input:valid~label 
+    top: 6px
+    font-size: 11px
+
+  .input__box:nth-child(1)
+    margin-top: 3rem
+  .input__box:nth-child(2) input
+    letter-spacing: 1px
+  input
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+    padding: 24px 16px 12px 17px
+    width: 23vw
+    margin-bottom: 30px
+    background: rgba(0, 0, 0, 0.5)
+    outline: none
+    border: 1px solid #252525
+    border-radius: 6px
+    color: #fff
+    font-size: 13px
+    letter-spacing: .3px
+
+#pannel__to__desc
+  position: absolute
+  left: 50%
+  bottom: 7rem
+  transform: translateX(-50%)
+
+  p
+    color: #7e7e7e
+    font-size: 13px
+    letter-spacing: .3px
+    font-weight: 400
+
+#bottom__pannel__continue
+  position: absolute
+  bottom: 0
+  left: 0
+
+  background: #151515
+  border: 1px solid #353535
+  width: 100%
+
+  .elements__signin__bottom
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 2rem
+
+    padding: 10px 5px
+
+    .left > p
+      color: #fff
+      font-weight: 400
+      letter-spacing: .3px
+      font-size: 14px
+
+      a
+        color: #007bff
+        text-decoration: none
+
+    .right > button
+      cursor: pointer
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif
+      background: #006fe5
+      border: none
+      color: #fff
+      border-radius: 6px
+      padding: 10px 3rem
+      letter-spacing: .3px
+      font-weight: 500
+      transition: .3s
+
+    
+@media only screen and (max-width: 450px)
+  #top__pannel__signin p:nth-child(1)
+    font-size: 25px
+    margin: 5rem 0 8px
+  #top__pannel__signin p:nth-child(2)
+    font-size: 14px
+  #pannel__inputs input 
+    width: 75vw
+  #pannel__to__desc p 
+    text-align: center
+    font-size: 14px
+    min-width: 350px
+  #pannel__inputs input
+    border: 1px solid #393939
+    font-size: 15px
+    letter-spacing: .6px
+    border-radius: 10px
+    padding: 26px 16px 13px 17px
+  #pannel__inputs .input__box > label
+    font-size: 14px
+  #pannel__inputs .input__box:nth-child(2) input
+    letter-spacing: 2px
+  #pannel__inputs .input__box input:focus ~ label, #pannel__inputs .input__box input:valid ~ label
+    top: 8px
+  #bottom__pannel__continue .elements__signin__bottom .left > p
+    font-size: 13px
+    letter-spacing: .5px
+  #bottom__pannel__continue .elements__signin__bottom .right > button
+    padding: 10px 2.5rem
+  #bottom__pannel__continue .elements__signin__bottom
+    padding: 12px 5px
