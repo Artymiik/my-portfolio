@@ -36,9 +36,10 @@ export const Navigator = () => {
   const menuBtnClose = React.useRef(null);
 
   const openMenu = () => {
-    menu.current.style.display = "block";
-
-    gsap.set(menu.current, {transform: "translate(0px, 0px)"})
+    gsap.set(menu.current, {
+      transform: "translate(0px, 0px)",
+      display: "block",
+    });
     gsap.from(menu.current, {
       x: -800,
       duration: 0.3,
