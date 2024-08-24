@@ -1,0 +1,142 @@
+#about
+  #bg
+    position: fixed
+    z-index: -9999
+    top: 0
+    left: 55%
+    transform: translateX(-50%)
+
+    width: 100vw
+    height: 100vh
+
+    background-repeat: no-repeat
+    background-image: url(/bg.png)
+    background-position: center
+    background-size: cover
+    opacity: 0.15
+
+  #index__about
+    z-index: 2
+    position: relative
+    margin: 8rem 20rem
+
+    .elements__index__about
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+
+      .left-line
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 2rem 0 0
+
+        .circle-start
+          width: 10px
+          height: 10px
+        .line__one__index
+          background: linear-gradient(transparent, #7C72FF 30%)
+          height: 22rem
+          width: 3px
+        .line__two__index
+          background: linear-gradient(#7C72FF, #2DA44E 80%, #3FB950)
+          height: 23rem
+          width: 3px
+        .line__three__index
+          background: linear-gradient(rgb(51, 179, 174) 40%, transparent)
+          height: 15rem
+          width: 3px
+
+      .right-content
+        
+        .block__1, .block__2, .block__3
+          display: flex
+          align-items: center
+          margin: 0 0 9rem
+
+        .for__line__one
+          color: #fff
+          p:nth-child(1)
+            font-weight: 500
+            font-size: 40px
+            letter-spacing: .5px
+            text-wrap: balance
+            max-width: 50rem
+            margin: 0 0 1rem
+          p:nth-child(2)
+            margin: 0
+            font-weight: 400
+            letter-spacing: .5px
+            max-width: 80%
+            color: #9b9b9b
+
+        .right
+          position: absolute
+          right: 0
+          top: 20%
+          z-index: -999
+          img
+            width: 150px
+            opacity: 0.6
+            border-top-left-radius: 50px
+            border-bottom-right-radius: 50px 
+
+      .for__line__two
+        color: #fff
+
+        p:nth-child(1)
+          font-weight: 500
+          letter-spacing: .3px
+          font-size: 17px
+        p:nth-child(2)
+          font-size: 30px
+          font-weight: 600
+          letter-spacing: .5px
+          color: #e8e8e8
+          text-wrap: balance
+          margin-bottom: 0
+        p:nth-child(2)::first-line
+          color: #3fb950
+        p:nth-child(3)
+          color: #9e9e9e
+          margin: 1rem 0 0
+          letter-spacing: .3px
+
+          span
+            color: #fff
+            font-weight: 500
+
+      .for__line__three
+        color: #fff
+
+        p:nth-child(1)
+          font-weight: 500
+          letter-spacing: .3px
+          font-size: 17px
+        p:nth-child(2)
+          font-size: 30px
+          font-weight: 600
+          letter-spacing: .5px
+          color: #e8e8e8
+          text-wrap: balance
+          margin-bottom: 0
+        p:nth-child(2)::first-line
+          color: #33b3ae
+        p:nth-child(3)
+          color: #9e9e9e
+          margin: 1rem 0 0
+          letter-spacing: .3px
+          max-width: 90%
+
+      .right__bottom
+        position: absolute
+        right: 0
+        bottom: 22%
+        z-index: -999
+        img
+          width: 150px
+          opacity: 0.6
+          border-top-left-radius: 50px
+          border-bottom-right-radius: 50px 
+
+@import '../_adaptive'
