@@ -66,17 +66,19 @@
   .elements__nav__mobile
     display: flex
     flex-direction: column
-    margin: 4rem 2rem
+    margin: 4rem 2rem 0
 
     .links
       color: #fff
-      margin-bottom: 20px
+      margin-bottom: 25px
       font-weight: 500
       font-size: 22px
+      text-transform: uppercase
+      text-align: center
 
       transition: .4s
       text-decoration: none
-      letter-spacing: .3px
+      letter-spacing: .5px
       color: #cacaca
 
     .line
@@ -84,17 +86,52 @@
       height: 1px
       background: #313131
 
-    .authenticate
-      display: flex
-      align-items: center
+    .resource-github
+      color: #cacaca
+      letter-spacing: .3px
+      text-align: center
+      font-size: 14px
       margin-top: 20px
 
-      background: linear-gradient(145deg, #2b2b2b 0%, #151515 58%)
-      padding: 3px 15px
-      border-radius: 12px
-      border: 1px solid #323232
+      a
+        text-decoration: none
+        color: #006dc0
+        font-weight: 500
 
-      p
-        color: #cacaca
-        margin-left: 10px
-        letter-spacing: .3px
+    .contact__nav
+      display: flex
+      justify-content: center
+      align-items: center
+
+      margin: 15rem auto 0
+
+      a
+        margin-right: 20px
+      a:nth-child(3)
+        margin-right: 0
+
+    .authenticate
+      position: absolute
+      bottom: 10%
+      width: 85vw
+
+      .line-bottom
+        height: 1px
+        width: 100%
+        background: #313131
+
+      .content
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-top: 20px
+
+        // background: linear-gradient(145deg, #2b2b2b 0%, #151515 58%)
+        // padding: 0 0
+        // border-radius: 12px
+        // border: 1px solid #323232
+
+        p
+          color: #cacaca
+          margin-left: 10px
+          letter-spacing: .5px

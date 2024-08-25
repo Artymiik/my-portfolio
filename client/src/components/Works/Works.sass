@@ -1,0 +1,75 @@
+#works
+  .slider-all
+    display: flex
+    width: 300vw
+
+    section
+      position: relative
+      height: 80vh
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 8rem
+      max-width: 75em
+
+      .inner
+        position: absolute
+        top: 50%
+        right: 0%
+        transform: translate(-50%, -50%)
+
+        display: flex
+
+        img
+          position: absolute
+          z-index: -99
+          right: 0
+          transform: translateY(-50%)
+          width: 550px
+        .mobile__fte
+          width: 300px
+          right: 7rem
+
+      .number
+        font-size: 20rem
+        color: #fff
+        position: absolute
+        top: 60%
+        left: 36%
+        filter: blur(1px)
+        transform: translate(-50%, -50%)
+        opacity: 0.16
+        font-family: "New Amsterdam", sans-serif
+
+      .content
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        z-index: 5
+
+        .links__web
+          display: flex
+          align-items: center
+          p
+            margin: 0
+          p:nth-child(2)
+            margin-left: 20px
+          p > a
+            color: #0074cd
+            font-size: 14px
+
+        h1
+          color: #fff
+          text-wrap: balance
+          font-size: 30px
+          letter-spacing: .3px
+          max-width: 20em
+        p
+          color: #eeeeee
+        p:nth-child(2)
+          max-width: 50%
+          font-size: 13px
+          text-wrap: balance
+          letter-spacing: .5px

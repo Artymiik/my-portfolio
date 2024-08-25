@@ -1,4 +1,11 @@
-import { AlignJustify, UserRound, X } from "lucide-react";
+import {
+  AlignJustify,
+  Github,
+  Instagram,
+  Send,
+  UserRound,
+  X,
+} from "lucide-react";
 import "./Navigator.sass";
 import { Link } from "react-router-dom";
 import React from "react";
@@ -20,13 +27,13 @@ const links = [
   {
     id: 3,
     title: "Работы",
-    title_mobile: "Проекты и работы",
+    title_mobile: "Работы и Проекты",
     path: "/works",
   },
   {
     id: 4,
     title: "Контакты",
-    title_mobile: "Социальные сети",
+    title_mobile: "Контакты",
     path: "/contact",
   },
 ];
@@ -46,34 +53,40 @@ export const Navigator = () => {
     });
 
     gsap.set(".link-0", { x: -20, opacity: 0 });
-    gsap.to(".link-0", 0.2, {
+    gsap.to(".link-0", 0.15, {
       x: 0,
       opacity: 1,
       delay: 0.1,
     });
     gsap.set(".link-1", { x: -20, opacity: 0 });
-    gsap.to(".link-1", 0.2, {
+    gsap.to(".link-1", 0.15, {
+      x: 0,
+      opacity: 1,
+      delay: 0.15,
+    });
+    gsap.set(".link-2", { x: -20, opacity: 0 });
+    gsap.to(".link-2", 0.15, {
       x: 0,
       opacity: 1,
       delay: 0.2,
     });
-    gsap.set(".link-2", { x: -20, opacity: 0 });
-    gsap.to(".link-2", 0.2, {
+    gsap.set(".link-3", { x: -20, opacity: 0 });
+    gsap.to(".link-3", 0.15, {
+      x: 0,
+      opacity: 1,
+      delay: 0.25,
+    });
+    gsap.set(".authenticate", { x: 100, opacity: 0 });
+    gsap.to(".authenticate", 0.2, {
       x: 0,
       opacity: 1,
       delay: 0.3,
     });
-    gsap.set(".link-3", { x: -20, opacity: 0 });
-    gsap.to(".link-3", 0.2, {
+    gsap.set(".resource-github", { opacity: 0, x: -20 });
+    gsap.to(".resource-github", 0.15, {
       x: 0,
       opacity: 1,
-      delay: 0.4,
-    });
-    gsap.set(".authenticate", { x: 100, opacity: 0 });
-    gsap.to(".authenticate", 0.3, {
-      x: 0,
-      opacity: 1,
-      delay: 0.4,
+      delay: 0.3,
     });
   };
 
@@ -130,13 +143,48 @@ export const Navigator = () => {
           ))}
           <div className="line"></div>
 
+          <p className="resource-github">
+            Код и ресурсы этого сайта, можно найти в моём{" "}
+            <Link to="https://github.com/Artymiik/my-portfolio">github</Link>
+          </p>
+
+          <div className="contact__nav">
+            <Link to="https://github.com/Artymiik">
+              <Github
+                className="icon_soc"
+                size={25}
+                color="#5b5b5b"
+                strokeWidth={1.5}
+              />
+            </Link>
+            <Link to="">
+              <Instagram
+                className="icon_soc"
+                size={25}
+                color="#5b5b5b"
+                strokeWidth={1.5}
+              />
+            </Link>
+            <Link to="https://t.me/artem_iik">
+              <Send
+                className="icon_soc"
+                size={25}
+                color="#5b5b5b"
+                strokeWidth={1.5}
+              />
+            </Link>
+          </div>
+
           <Link
             to="/signin"
             className="authenticate"
             style={{ textDecoration: "none" }}
           >
-            <UserRound size={22} color="#cacaca" strokeWidth={1.5} />
-            <p>Открыть доступ</p>
+            <div className="line-bottom"></div>
+            <div className="content">
+              <p>Войти в систему</p>
+              <UserRound size={22} color="#cacaca" strokeWidth={1.5} />
+            </div>
           </Link>
         </div>
       </div>

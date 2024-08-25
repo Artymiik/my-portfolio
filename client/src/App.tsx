@@ -21,6 +21,10 @@ const App = createBrowserRouter([
         path: "signup",
         element: <pages.signup />,
       },
+      {
+        path: "works",
+        element: <pages.works />,
+      },
     ],
   },
 ]);
