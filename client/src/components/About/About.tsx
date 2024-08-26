@@ -2,12 +2,9 @@ import { Clock, LaptopMinimal } from "lucide-react";
 import { Navigator } from "../Navigator/Navigator";
 import "./About.sass";
 import React from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/all";
 import { animateAbout } from "../animations/about.animation";
 
 export const About = () => {
-  // gsap.registerPlugin(ScrollTrigger);
 
   React.useEffect(() => {
     animateAbout();

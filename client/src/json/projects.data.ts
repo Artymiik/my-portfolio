@@ -30,8 +30,8 @@ export const projects = [
     title: "Создание собственного проекта FTE",
     description:
       "Я разработал собственный криптокошелек под названием Future за два месяца. Идея проекта возникла в тот момент, когда криптоигры начали набирать популярность. Проект написан на React, Sass, Python, C# Web API. Этот проект не только позволил мне улучшить практические навыки разработки программного обеспечения, но и дал возможность углубиться в мир криптовалют и технологий блокчейн!",
-    httpsWeb: "https://artymiik.github.io/starbucks-home/",
-    resources: "https://github.com/Artymiik/starbucks-home",
+    httpsWeb: "",
+    resources: "https://github.com/Artymiik/The-Future",
     img: [
       "/works/fte-home.jpg",
       "works/fte-shop.jpg",

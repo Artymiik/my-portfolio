@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import { Navigator } from "../Navigator/Navigator";
 import "./Works.sass";
 import { ImageSlider } from "./ImageSlider";
-import { projects } from "../../data/projects.data";
+import { projects } from "../../json/projects.data";
+import React from "react";
+import { animateWorks } from "../animations/works.animation";
 
 interface Props {
   id: number;
@@ -18,13 +20,13 @@ const FunctionStruct = (prop: Props) => {
     <>
       <div className="number">0{prop.id}</div>
       <div className="content">
-        <h1>{prop.title}</h1>
-        <p>{prop.description}</p>
+        <h1 className="title-project">{prop.title}</h1>
+        <p className="description-project">{prop.description}</p>
         <div className="links__web">
-          <p>
+          <p className="web-site">
             [<Link to={prop.httpsWeb}>Посетить сайт</Link>]
           </p>
-          <p>
+          <p className="web-resources">
             [<Link to={prop.resources}>Архитектура сайта</Link>]
           </p>
         </div>
@@ -44,6 +46,10 @@ export const Works = () => {
   if (project_sport == undefined) return;
   if (project_starbucks == undefined) return;
   if (project_fte == undefined) return;
+
+  React.useEffect(() => {
+    animateWorks();
+  }, []);
 
   return (
     <>

@@ -10,6 +10,7 @@ import "./Navigator.sass";
 import { Link } from "react-router-dom";
 import React from "react";
 import gsap from "gsap";
+import { animateNavigator } from "../animations/navigator.animation";
 
 const links = [
   {
@@ -32,9 +33,9 @@ const links = [
   },
   {
     id: 4,
-    title: "Контакты",
-    title_mobile: "Контакты",
-    path: "/contact",
+    title: "Сообщение",
+    title_mobile: "Сообщение",
+    path: "/message",
   },
 ];
 
@@ -43,51 +44,7 @@ export const Navigator = () => {
   const menuBtnClose = React.useRef(null);
 
   const openMenu = () => {
-    gsap.set(menu.current, {
-      transform: "translate(0px, 0px)",
-      display: "block",
-    });
-    gsap.from(menu.current, {
-      x: -800,
-      duration: 0.3,
-    });
-
-    gsap.set(".link-0", { x: -20, opacity: 0 });
-    gsap.to(".link-0", 0.15, {
-      x: 0,
-      opacity: 1,
-      delay: 0.1,
-    });
-    gsap.set(".link-1", { x: -20, opacity: 0 });
-    gsap.to(".link-1", 0.15, {
-      x: 0,
-      opacity: 1,
-      delay: 0.15,
-    });
-    gsap.set(".link-2", { x: -20, opacity: 0 });
-    gsap.to(".link-2", 0.15, {
-      x: 0,
-      opacity: 1,
-      delay: 0.2,
-    });
-    gsap.set(".link-3", { x: -20, opacity: 0 });
-    gsap.to(".link-3", 0.15, {
-      x: 0,
-      opacity: 1,
-      delay: 0.25,
-    });
-    gsap.set(".authenticate", { x: 100, opacity: 0 });
-    gsap.to(".authenticate", 0.2, {
-      x: 0,
-      opacity: 1,
-      delay: 0.3,
-    });
-    gsap.set(".resource-github", { opacity: 0, x: -20 });
-    gsap.to(".resource-github", 0.15, {
-      x: 0,
-      opacity: 1,
-      delay: 0.3,
-    });
+    animateNavigator(menu);
   };
 
   const closeMenu = () => {
@@ -145,11 +102,21 @@ export const Navigator = () => {
 
           <p className="resource-github">
             Код и ресурсы этого сайта, можно найти в моём{" "}
-            <Link to="https://github.com/Artymiik/my-portfolio">github</Link>
+            <Link
+              to="https://github.com/Artymiik/my-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github
+            </Link>
           </p>
 
           <div className="contact__nav">
-            <Link to="https://github.com/Artymiik">
+            <Link
+              to="https://github.com/Artymiik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github
                 className="icon_soc"
                 size={25}
@@ -157,7 +124,11 @@ export const Navigator = () => {
                 strokeWidth={1.5}
               />
             </Link>
-            <Link to="">
+            <Link
+              to="https://www.instagram.com/artem.iik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Instagram
                 className="icon_soc"
                 size={25}
@@ -165,7 +136,11 @@ export const Navigator = () => {
                 strokeWidth={1.5}
               />
             </Link>
-            <Link to="https://t.me/artem_iik">
+            <Link
+              to="https://t.me/artem_iik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Send
                 className="icon_soc"
                 size={25}
